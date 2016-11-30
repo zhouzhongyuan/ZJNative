@@ -1,0 +1,90 @@
+//
+//  RootTabbarController.m
+//  不一样的烟火
+//
+//  Created by 吉源 on 16/5/12.
+//  Copyright © 2016年 吉源. All rights reserved.
+//
+
+#import "RootTabbarController.h"
+#import "RootNavigationController.h"
+#import "HeaderController.h"
+#import "FindController.h"
+#import "ShoppingCarController.h"
+#import "MineController.h"
+#import "AppDelegate.h"
+#import "LogInController.h"
+@interface RootTabbarController ()<UITabBarControllerDelegate>
+@property(nonatomic,assign)BOOL canJump;
+@end
+
+@implementation RootTabbarController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.delegate=self;
+    _canJump=YES;
+    HeaderController *firstVC = [[HeaderController alloc]init];
+    firstVC.tabBarItem.title = @"首页";
+    [firstVC.tabBarItem setTitleTextAttributes:                                                         [NSDictionary dictionaryWithObjectsAndKeys:APPMAINCOLOR,NSForegroundColorAttributeName, nil]forState:UIControlStateSelected];
+    firstVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"形状8副本"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    firstVC.tabBarItem.image = [[UIImage imageNamed:@"形状8"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    RootNavigationController *firstNvc = [[RootNavigationController alloc] initWithRootViewController:firstVC];
+    firstVC.navigationItem.title = @"车掌柜";
+    firstVC.navigationController.navigationBar.translucent = NO;
+    [firstVC.navigationController.navigationBar setBarTintColor:APPMAINCOLOR];
+
+    
+    FindController *thirdVC = [[FindController alloc]init];
+    thirdVC.tabBarItem.title = @"发现";
+    [thirdVC.tabBarItem setTitleTextAttributes:                                                         [NSDictionary dictionaryWithObjectsAndKeys:APPMAINCOLOR,NSForegroundColorAttributeName, nil]forState:UIControlStateSelected];
+    thirdVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"形状51"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    thirdVC.tabBarItem.image = [[UIImage imageNamed:@"形状511"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    RootNavigationController *thirdNvc = [[RootNavigationController alloc] initWithRootViewController:thirdVC];
+    thirdVC.navigationItem.title = @"发现";
+    thirdVC.navigationController.navigationBar.translucent = NO;
+    [thirdVC.navigationController.navigationBar setBarTintColor:APPMAINCOLOR];
+    
+    ShoppingCarController *fourthVC = [[ShoppingCarController alloc]init];
+    fourthVC.tabBarItem.title = @"购物车";
+    [fourthVC.tabBarItem setTitleTextAttributes:                                                         [NSDictionary dictionaryWithObjectsAndKeys:APPMAINCOLOR,NSForegroundColorAttributeName, nil]forState:UIControlStateSelected];
+    fourthVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"形状49副本"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    fourthVC.tabBarItem.image = [[UIImage imageNamed:@"形状49"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    RootNavigationController *fourthNvc = [[RootNavigationController alloc] initWithRootViewController:fourthVC];
+    fourthVC.navigationItem.title = @"购物车";
+    fourthVC.navigationController.navigationBar.translucent = NO;
+    [fourthVC.navigationController.navigationBar setBarTintColor:APPMAINCOLOR];
+    
+    MineController *fifthVC = [[MineController alloc]init];
+    fifthVC.tabBarItem.title = @"我的";
+    [fifthVC.tabBarItem setTitleTextAttributes:                                                         [NSDictionary dictionaryWithObjectsAndKeys:APPMAINCOLOR,NSForegroundColorAttributeName, nil]forState:UIControlStateSelected];
+    fifthVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"形状48副本"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    fifthVC.tabBarItem.image = [[UIImage imageNamed:@"形状48"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    RootNavigationController *fifthNvc = [[RootNavigationController alloc] initWithRootViewController:fifthVC];
+    fifthVC.navigationItem.title = @"我的";
+    fifthVC.navigationController.navigationBar.translucent = NO;
+    [fifthVC.navigationController.navigationBar setBarTintColor:APPMAINCOLOR];
+    self.viewControllers = @[firstNvc,thirdNvc,fourthNvc,fifthNvc];
+//
+}
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[UINavigationController class]]) {
+        [(UINavigationController *) viewController popToRootViewControllerAnimated:YES];
+    }
+}
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    if (item == tabBar.items[2]&&!APPDELEGATE.userCode) {
+        _canJump=NO;
+        RootNavigationController *naviVC=[[RootNavigationController alloc]initWithRootViewController:[[LogInController alloc]init]];
+        naviVC.navigationBar.translucent = NO;
+        [naviVC.navigationBar setBarTintColor:APPMAINCOLOR];
+        [self presentViewController:naviVC animated:YES completion:nil];
+    }else{
+        _canJump=YES;
+    }
+}
+-(BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    return _canJump;
+}
+
+@end
