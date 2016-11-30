@@ -175,7 +175,7 @@
     }
     StockCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StockCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"StockCell" owner:nil options:nil]firstObject];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"ZJNativeBundle.bundle/StockCell" owner:nil options:nil]firstObject];
         
     }
     cell.clipsToBounds= YES;

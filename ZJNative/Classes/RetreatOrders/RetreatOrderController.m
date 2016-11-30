@@ -266,7 +266,7 @@
     if (indexPath.row == 5) {
         PhotographCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PhotographCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"PhotographCell" owner:nil options:nil]firstObject];
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"ZJNativeBundle.bundle/PhotographCell" owner:nil options:nil]firstObject];
         }
         [cell.botton1 addTarget:self action:@selector(upDatePhotoAction:) forControlEvents:UIControlEventTouchUpInside];
         [cell.button2 addTarget:self action:@selector(upDatePhotoAction:) forControlEvents:UIControlEventTouchUpInside];

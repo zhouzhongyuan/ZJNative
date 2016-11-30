@@ -180,7 +180,7 @@
     }
     PriceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PriceCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"PriceCell" owner:nil options:nil]firstObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ZJNativeBundle.bundle/PriceCell" owner:nil options:nil]firstObject];
     }
     cell.clipsToBounds= YES;
     cell.nameLabel.text = _priceModel.materialname;
