@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A24348CE1DEFFD4400C1C246 /* ZJNative-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A24348D11DEFFD4400C1C246 /* Build configuration list for PBXAggregateTarget "ZJNative-Universal" */;
+			buildPhases = (
+				A24348D41DEFFD7D00C1C246 /* ShellScript */,
+			);
+			dependencies = (
+				A24348D31DEFFD6600C1C246 /* PBXTargetDependency */,
+			);
+			name = "ZJNative-Universal";
+			productName = "ZJNative-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A254EBA71DEEB00A00CF2A54 /* ZJNative.h in Headers */ = {isa = PBXBuildFile; fileRef = A254EBA51DEEB00A00CF2A54 /* ZJNative.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A28751051DEED38000A1CB54 /* CoredataDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A2874FF91DEED37F00A1CB54 /* CoredataDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -246,7 +261,18 @@
 		A28751F01DEED38000A1CB54 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A28751011DEED38000A1CB54 /* SVRadialGradientLayer.h */; };
 		A28751F11DEED38000A1CB54 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28751021DEED38000A1CB54 /* SVRadialGradientLayer.m */; };
 		A28751F21DEED38000A1CB54 /* Macro.h in Headers */ = {isa = PBXBuildFile; fileRef = A28751041DEED38000A1CB54 /* Macro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2E171D31DF01A43005C954A /* ios-build-framework-script.sh in Resources */ = {isa = PBXBuildFile; fileRef = A2E171D21DF01A43005C954A /* ios-build-framework-script.sh */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A24348D21DEFFD6600C1C246 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A254EB991DEEB00600CF2A54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A254EBA11DEEB00700CF2A54;
+			remoteInfo = ZJNative;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A254EBA21DEEB00A00CF2A54 /* ZJNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZJNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -490,6 +516,7 @@
 		A28751011DEED38000A1CB54 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		A28751021DEED38000A1CB54 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		A28751041DEED38000A1CB54 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		A2E171D21DF01A43005C954A /* ios-build-framework-script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "ios-build-framework-script.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,6 +549,7 @@
 		A254EBA41DEEB00A00CF2A54 /* ZJNative */ = {
 			isa = PBXGroup;
 			children = (
+				A2E171D21DF01A43005C954A /* ios-build-framework-script.sh */,
 				A2874FF81DEED37F00A1CB54 /* Base */,
 				A28750041DEED37F00A1CB54 /* Categorys */,
 				A287500F1DEED37F00A1CB54 /* Classes */,
@@ -1169,6 +1197,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = bokeadmin;
 				TargetAttributes = {
+					A24348CE1DEFFD4400C1C246 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5C83KHGVSN;
+						ProvisioningStyle = Automatic;
+					};
 					A254EBA11DEEB00700CF2A54 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 5C83KHGVSN;
@@ -1189,6 +1222,7 @@
 			projectRoot = "";
 			targets = (
 				A254EBA11DEEB00700CF2A54 /* ZJNative */,
+				A24348CE1DEFFD4400C1C246 /* ZJNative-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -1209,6 +1243,7 @@
 				A28751B81DEED38000A1CB54 /* image.bundle in Resources */,
 				A287518E1DEED38000A1CB54 /* RetreatGoodCell.xib in Resources */,
 				A28751ED1DEED38000A1CB54 /* SVProgressHUD.bundle in Resources */,
+				A2E171D31DF01A43005C954A /* ios-build-framework-script.sh in Resources */,
 				A287510F1DEED38000A1CB54 /* WinJoinView.xib in Resources */,
 				A28751E51DEED38000A1CB54 /* PopupView.xib in Resources */,
 				A28751911DEED38000A1CB54 /* ActivityCell.xib in Resources */,
@@ -1217,6 +1252,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A24348D41DEFFD7D00C1C246 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/${PROJECT_DIR}/ZJNative/ios-build-framework-script.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A254EB9D1DEEB00700CF2A54 /* Sources */ = {
@@ -1337,7 +1388,33 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A24348D31DEFFD6600C1C246 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A254EBA11DEEB00700CF2A54 /* ZJNative */;
+			targetProxy = A24348D21DEFFD6600C1C246 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A24348CF1DEFFD4400C1C246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5C83KHGVSN;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A24348D01DEFFD4400C1C246 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5C83KHGVSN;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A254EBA81DEEB00A00CF2A54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1446,6 +1523,7 @@
 				INFOPLIST_FILE = ZJNative/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = person.zhongyuan.ZJNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1464,6 +1542,7 @@
 				INFOPLIST_FILE = ZJNative/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = person.zhongyuan.ZJNative;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1473,6 +1552,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A24348D11DEFFD4400C1C246 /* Build configuration list for PBXAggregateTarget "ZJNative-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A24348CF1DEFFD4400C1C246 /* Debug */,
+				A24348D01DEFFD4400C1C246 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A254EB9C1DEEB00600CF2A54 /* Build configuration list for PBXProject "ZJNative" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

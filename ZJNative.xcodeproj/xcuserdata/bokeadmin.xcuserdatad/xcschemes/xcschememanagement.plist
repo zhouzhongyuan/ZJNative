@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ZJNative-Universal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ZJNative.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A24348CE1DEFFD4400C1C246</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A254EBA11DEEB00700CF2A54</key>
 		<dict>
 			<key>primary</key>
