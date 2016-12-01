@@ -269,7 +269,7 @@
     PromotionModel *model = [_dataSource objectAtIndex:indexPath.row];
     ActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ActivityCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"ActivityCell" owner:nil options:nil]firstObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"ZJNativeBundle.bundle/ActivityCell" owner:nil options:nil]firstObject];
     }
     cell.clipsToBounds = YES;
     cell.label1.text = [NSString stringWithFormat:@"%ld 促销活动号：%@",indexPath.row+1,model.code];

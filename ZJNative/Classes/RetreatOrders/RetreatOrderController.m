@@ -248,7 +248,7 @@
         RetreatOrderGoodModel *model = [_dataSource objectAtIndex:indexPath.row];
         RetreatGoodCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RetreatGoodCell"];
         if (!cell) {
-            cell = [[[NSBundle mainBundle]loadNibNamed:@"RetreatGoodCell" owner:nil options:nil]firstObject];
+            cell = [[[NSBundle mainBundle]loadNibNamed:@"ZJNativeBundle.bundle/RetreatGoodCell" owner:nil options:nil]firstObject];
         }
         cell.nameLabel.text = [NSString stringWithFormat:@"物料：%@",model.materialName];
         cell.numLabel.text = [NSString stringWithFormat:@"订单数量：%ld",model.quantity.integerValue];

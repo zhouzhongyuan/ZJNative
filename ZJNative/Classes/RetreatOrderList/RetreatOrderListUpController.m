@@ -72,7 +72,7 @@
     RetreatOrderModel *model = [_dataSource objectAtIndex:indexPath.section];
     PlaceOrderListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PlaceOrderListCell"];
     if (!cell) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"PlaceOrderListCell" owner:nil options:nil]firstObject];
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"ZJNativeBundle.bundle/PlaceOrderListCell" owner:nil options:nil]firstObject];
     }
     cell.customerLabel.text = model.customerName;
     cell.userLabel.text = model.staffName;
