@@ -752,14 +752,14 @@
 }
 
 -(void)setBottomButton{
-    UIButton *button0=[[UIButton alloc]initWithFrame:CGRectMake(10, SCREEN_HEIGTH-64-70-70, SCREEN_WIDTH-20, 50)];
-    [button0 setBackgroundColor:APPMAINCOLOR];
-    button0.titleLabel.font=[UIFont systemFontOfSize:16];
-    [button0 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button0 addTarget:self action:@selector(loadDataAction) forControlEvents:UIControlEventTouchUpInside];
-    button0.layer.cornerRadius=3;
-    [button0 setTitle:@"下载数据" forState:UIControlStateNormal];
-    [self.view addSubview:button0];
+//    UIButton *button0=[[UIButton alloc]initWithFrame:CGRectMake(10, SCREEN_HEIGTH-64-70-70, SCREEN_WIDTH-20, 50)];
+//    [button0 setBackgroundColor:APPMAINCOLOR];
+//    button0.titleLabel.font=[UIFont systemFontOfSize:16];
+//    [button0 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [button0 addTarget:self action:@selector(loadDataAction) forControlEvents:UIControlEventTouchUpInside];
+//    button0.layer.cornerRadius=3;
+//    [button0 setTitle:@"下载数据" forState:UIControlStateNormal];
+//    [self.view addSubview:button0];
     
     UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(10, SCREEN_HEIGTH-64-70, SCREEN_WIDTH-20, 50)];
     [button setBackgroundColor:APPMAINCOLOR];
